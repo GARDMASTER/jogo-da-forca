@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+	
+	<!-- <f:view renderKitId="PRIMEFACES_MOBILE"/> -->
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title> GARD GAMES</title>
+	
+		<!-- CSS -->
+        <h:outputStylesheet library="css" name="style.css" />	
+        <link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+			
+	</h:head>
+	<body>
+		<div id="logo">
+			<div class="ui-g">
+   				<div class="ui-g-12 ui-offset-md-4 ui-offset-lg-4">
+   					<h:graphicImage library="images" name="gg.png" width="300"/>
+   				</div>
+   			</div>
+			
+		</div>
+		<h:form id="navbar-gg">
+			<p:menubar>
+				<p:menuitem value="Home" url="index.xhtml"/>
+				<p:menuitem value="Jogo da Forca" url="hangman.xhtml"/>
+				<p:menuitem value="Batalha Naval" disabled="true"/>
+				<p:menuitem value="About Us" url="aboutus.xhtml"/>
+			</p:menubar>
+		</h:form>
+		<ui:insert></ui:insert>
+	
+		<div id="footer">GARD's Corporation &copy; GARD GAMES 2018. All Rights Reserved.</div>
+		<!-- JS -->					
+		<script src="js/geral.js"></script>	
+	</body>
+</html>
