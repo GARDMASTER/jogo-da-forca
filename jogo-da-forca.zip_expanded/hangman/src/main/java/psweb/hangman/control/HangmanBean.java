@@ -1,9 +1,11 @@
-package psweb.hangman;
+package psweb.hangman.control;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import org.springframework.stereotype.Component;
+
+import psweb.hangman.model.Hangman;
 
 @Component
 @ManagedBean
