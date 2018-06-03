@@ -9,6 +9,7 @@
 	<!-- <f:view renderKitId="PRIMEFACES_MOBILE"/> -->
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title> GARD GAMES</title>
 	
 		<!-- CSS -->
@@ -36,6 +37,7 @@
 				<p:submenu label="Redes Sociais">
 					<p:menuitem value="Facebook" url="https://www.facebook.com/GARD.MASTER" target="blank"/>
 					<p:menuitem value="GitHub" url="https://github.com/GARDMASTER" target="blank"/>
+					<p:menuitem value="Twitter" url="https://twitter.com/GARD_MASTER" target="blank"/>
 					<p:menuitem value="Youtube" url="https://www.youtube.com/channel/UCGyO2yi4WFiBNNMHm4otfEg" target="blank"/>
 				</p:submenu>
 				<p:menuitem value="About Us" url="aboutus.xhtml"/>
@@ -43,7 +45,64 @@
 		</h:form>
 		<ui:insert></ui:insert>
 	
-		<div id="footer">GARD's Corporation &copy; GARD GAMES 2018. All Rights Reserved.</div>
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>GARD<span>Games</span></h3>
+
+				<p class="footer-links">
+					<a href="index.xhtml">Home</a>
+					·
+					<a href="hangman.xhtml">Jogo da Forca</a>
+					·
+					<a href="aboutus.xhtml">About Us</a>
+					
+					
+				</p>
+
+				<p class="footer-company-name">GARD's Corporation &copy; 2018</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span> Av. Maracanã, 229</span> Rio de Janeiro, Brasil</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+55 21 975828929</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:garduarte@yahoo.com.br">garduarte@yahoo.com.br</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Sobre a GARD Games</span>
+					Fundada em 2018, a GARD Games surge com a intenção de proporcionar entretenimento e diversão
+					para todos os apaixonados por jogos online.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="https://www.facebook.com/GARD.MASTER" target="blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/GARD_MASTER" target="blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.youtube.com/channel/UCGyO2yi4WFiBNNMHm4otfEg" target="blank"><i class="fa fa-youtube"></i></a>
+					<a href="https://github.com/GARDMASTER" target="blank"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
 		<!-- JS -->					
 		<script src="js/geral.js"></script>	
 	</body>
