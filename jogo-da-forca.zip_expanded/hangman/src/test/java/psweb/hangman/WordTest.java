@@ -2,7 +2,7 @@ package psweb.hangman;
 
 import org.junit.Test;
 
-import psweb.hangman.model.Word;
+import psweb.hangman.model.entity.Word;
 
 import org.junit.Assert;
 

@@ -3,6 +3,10 @@
 	background-color: lightblue;
 }
 
+.font-navbar {
+	font-size: 50px !important;
+}
+
 #welcome {
 	font-size: 2em;
 	text-align: center;

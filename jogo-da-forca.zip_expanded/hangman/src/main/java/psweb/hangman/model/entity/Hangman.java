@@ -1,4 +1,4 @@
-package psweb.hangman.model;
+package psweb.hangman.model.entity;
 
 import java.util.ArrayList;
 import java.util.List;

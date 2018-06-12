@@ -1,4 +1,4 @@
-package psweb.hangman.model;
+package psweb.hangman.model.entity;
 
 public class Word 
 {

@@ -5,7 +5,7 @@ import javax.faces.bean.SessionScoped;
 
 import org.springframework.stereotype.Component;
 
-import psweb.hangman.model.Hangman;
+import psweb.hangman.model.entity.Hangman;
 
 @Component
 @ManagedBean

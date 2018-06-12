@@ -2,7 +2,7 @@ package psweb.hangman;
 
 import java.util.Scanner;
 
-import psweb.hangman.model.Hangman;
+import psweb.hangman.model.entity.Hangman;
 
 public class Game 
 {
