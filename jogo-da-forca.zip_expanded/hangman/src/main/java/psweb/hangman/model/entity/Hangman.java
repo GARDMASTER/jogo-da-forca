@@ -1,10 +1,17 @@
 package psweb.hangman.model.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hangman 
+import psweb.hangman.control.WordServices;
+
+public class Hangman implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int chances = 6;
 	private Word currentWord;
 	private List<Character> history;
@@ -17,12 +24,14 @@ public class Hangman
 	// Sorteia uma nova palavra
 	public void reset()
 	{
-		reset("Hello"); // TODO - Buscar de um dicionario		
+		reset(WordServices.buscarPalavra());
 	}
 	
-	public void reset(String forcedWord)
+	public void reset(Word palavra)
 	{
-		currentWord = new Word(forcedWord);
+		
+		currentWord = new Word(palavra.getDescr_palavra());
+		currentWord.setDica_palavra(palavra.getDica_palavra());
 		chances = 6;
 		history = new ArrayList<Character>();
 	}
@@ -61,6 +70,10 @@ public class Hangman
 	
 	public String getWordAsString() {
 		return currentWord.getWordAsString();
+	}
+	
+	public String getDicaAsString() {
+		return currentWord.getDicaAsString();
 	}
 	
 	public String getAnswerAsString() {

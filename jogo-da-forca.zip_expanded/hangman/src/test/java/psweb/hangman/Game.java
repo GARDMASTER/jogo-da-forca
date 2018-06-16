@@ -3,6 +3,7 @@ package psweb.hangman;
 import java.util.Scanner;
 
 import psweb.hangman.model.entity.Hangman;
+import psweb.hangman.model.entity.Word;
 
 public class Game 
 {
@@ -11,7 +12,7 @@ public class Game
 	public static void main(String[] args)
 	{
 		Hangman hangman = new Hangman();
-		hangman.reset("sbrubbles");
+		hangman.reset(new Word("Hello"));
 		
 		while (hangman.getChances()>0 && !hangman.isComplete())
 		{

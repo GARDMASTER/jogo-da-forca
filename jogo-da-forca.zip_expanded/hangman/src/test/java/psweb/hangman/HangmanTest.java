@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import psweb.hangman.model.entity.Hangman;
+import psweb.hangman.model.entity.Word;
 
 public class HangmanTest 
 {
@@ -14,7 +15,7 @@ public class HangmanTest
 	{
 		// Inicia um novo jogo
 		Hangman hangman = new Hangman();
-		hangman.reset("hello");
+		hangman.reset(new Word("Hello"));
 		
 		// Testa a palavra inicial
 		String wordWithMask = hangman.getWordAsString();

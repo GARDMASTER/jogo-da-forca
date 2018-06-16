@@ -9,9 +9,15 @@
 
 	
 			<h:form id="form">
-				<h1>The PSWEB Hangman</h1>
-				<hr/>	
+				<div class="ui-g" style="text-align: center">
+	   				<div class="ui-g-12 ui-offset-md-4 ui-offset-lg-4">
+	   					<h:graphicImage library="images" name="title-gg.png" width="500"/>
+	   				</div>
+   				</div>
+					
 				<h2>Word: <h:outputText value="#{hangmanBean.word}" /></h2>
+				<br/>
+				<h2>Dica: <h:outputText value="#{hangmanBean.dica}" /></h2>
 				<br/>
 				<h2>Chances: <h:outputText value="#{hangmanBean.chances}" /></h2>
 				<br/>

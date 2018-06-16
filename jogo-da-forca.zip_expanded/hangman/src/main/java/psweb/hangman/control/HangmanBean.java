@@ -1,5 +1,7 @@
 package psweb.hangman.control;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -10,8 +12,13 @@ import psweb.hangman.model.entity.Hangman;
 @Component
 @ManagedBean
 @SessionScoped
-public class HangmanBean extends _Bean
+public class HangmanBean extends _Bean implements Serializable
 {    
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	//
 	// Atributos
 	//
@@ -53,6 +60,11 @@ public class HangmanBean extends _Bean
 	public String getWord()
 	{
 		return hangman.getWordAsString();
+	}
+	
+	public String getDica()
+	{
+		return hangman.getDicaAsString();
 	}
 	
 	public Integer getChances()
