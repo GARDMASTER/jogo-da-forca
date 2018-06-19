@@ -99,6 +99,28 @@ public class HangmanBean extends _Bean implements Serializable
 	public void setLetter(String letter) {
 		this.letter = letter;
 	}
+	
+	public String getImage() {
+		
+		int count = this.hangman.getChances();
+		
+		if(count == 6) {
+			return "forca-gg.png";
+		} else if (count == 5) {
+			return "forca-gg02.png";
+		} else if (count == 4){
+			return "forca-gg03.png";
+		} else if (count == 3){
+			return "forca-gg04.png";
+		} else if (count == 2){
+			return "forca-gg05.png";
+		} else if (count == 1){
+			return "forca-gg06.png";
+		} else{
+			return "forca-gg07.png";
+		}
+		
+	}
 }  
 
 
