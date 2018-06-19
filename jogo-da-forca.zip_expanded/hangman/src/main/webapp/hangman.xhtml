@@ -11,30 +11,39 @@
 			<h:form id="form">
 				<div class="ui-g" style="text-align: center">
 	   				<div class="ui-g-12 ui-offset-md-4 ui-offset-lg-4">
-	   					<h:graphicImage library="images" name="title-gg.png" width="500"/>
+	   					<h:graphicImage library="images" name="title-gg.png" width="300"/>
 	   				</div>
    				</div>
 					
-				<h2>Word: <h:outputText value="#{hangmanBean.word}" /></h2>
-				<br/>
-				<h2>Dica: <h:outputText value="#{hangmanBean.dica}" /></h2>
-				<br/>
-				<h2>Chances: <h:outputText value="#{hangmanBean.chances}" /></h2>
-				<br/>
-				<h2>Attempts: <h:outputText value="#{hangmanBean.attempts}" /></h2>
-				<br/>								
-				Pick a Letter: <p:inputText value="#{hangmanBean.letter}" 
-				                            maxlength="1"
-				                            readonly="#{hangmanBean.gameOver}">
-									<p:ajax event="keyup" update="form" />
-							   </p:inputText>
-				<p:commandButton value="Guess" 
-				                 actionListener="#{hangmanBean.guess()}"
-				                 disabled="#{empty hangmanBean.letter or hangmanBean.gameOver}"
-				                 update="form"/>
-				<p:commandButton value="Reset" 
-				                 actionListener="#{hangmanBean.reset()}"
-				                 update="form"/>		
+				<div class="ui-g">
+					<div class="ui-g-6" style="text-align: center">
+						<h:graphicImage library="images" name="forca-gg.png" width="300"/>				
+					</div>
+					
+					<div class="ui-g-6">
+						<h2>Palavra: <h:outputText value="#{hangmanBean.word}" /></h2>
+						<br/>
+						<h2>Dica: <h:outputText value="#{hangmanBean.dica}" /></h2>
+						<br/>
+						<h2>Chances: <h:outputText value="#{hangmanBean.chances}" /></h2>
+						<br/>
+						<h2>Tentativas: <h:outputText value="#{hangmanBean.attempts}" /></h2>
+						<br/>								
+						Escolha uma letra: <p:inputText value="#{hangmanBean.letter}" 
+						                            maxlength="1"
+						                            readonly="#{hangmanBean.gameOver}">
+											<p:ajax event="keyup" update="form" />
+									   </p:inputText>
+						<p:commandButton value="Guess" 
+						                 actionListener="#{hangmanBean.guess()}"
+						                 disabled="#{empty hangmanBean.letter or hangmanBean.gameOver}"
+						                 update="form"/>
+						<p:commandButton value="Reset" 
+						                 actionListener="#{hangmanBean.reset()}"
+						                 update="form"/>
+					</div>
+				</div>
+						
 				
 				<ui:fragment rendered="#{hangmanBean.gameOver}">
 					<hr/> 
