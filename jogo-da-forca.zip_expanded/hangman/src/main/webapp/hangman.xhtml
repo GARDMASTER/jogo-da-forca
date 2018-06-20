@@ -16,11 +16,11 @@
    				</div>
 					
 				<div class="ui-g">
-					<div class="ui-g-6" style="text-align: center">
+					<div class="ui-g-12 ui-md-6 ui-xl-6" style="text-align: center">
 						<h:graphicImage library="images" name="#{hangmanBean.image}" width="300"/>				
 					</div>
 					
-					<div class="ui-g-6">
+					<div class="ui-g-12 ui-md-6 ui-xl-6">
 						<h2>Palavra: <h:outputText value="#{hangmanBean.word}" /></h2>
 						<br/>
 						<h2>Dica: <h:outputText value="#{hangmanBean.dica}" /></h2>
@@ -32,6 +32,7 @@
 						Escolha uma letra: <p:inputText value="#{hangmanBean.letter}" 
 						                            maxlength="1"
 						                            readonly="#{hangmanBean.gameOver}">
+						                            
 											<p:ajax event="keyup" update="form" />
 									   </p:inputText>
 						<p:commandButton value="Guess" 
@@ -47,11 +48,17 @@
 				
 				<ui:fragment rendered="#{hangmanBean.gameOver}">
 					<hr/> 
-					<h1>				
-						<h:outputText value="Congratulations, you guessed!" 
-									  rendered="#{hangmanBean.gameWin}"/>
-						<h:outputText value="You are dead, hanged dead..."  
-						              rendered="#{hangmanBean.gameLose}"/>
+					<h1>	
+						<div style="text-align: center">	
+							<div style="color: green">	
+								<h:outputText class="msg-win" value="Congratulations, you guessed!" 
+											  rendered="#{hangmanBean.gameWin}"/>
+							</div>
+							<div style="color: red">
+								<h:outputText class="msg-lose" value="You are dead, hanged dead..." 
+								              rendered="#{hangmanBean.gameLose}"/>
+							</div>
+						</div>
 					</h1>
 				</ui:fragment>					
 			</h:form>

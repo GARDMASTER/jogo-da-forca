@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 import psweb.hangman.model.entity.Hangman;
 
+
+
 @Component
 @ManagedBean
 @SessionScoped
@@ -23,6 +25,7 @@ public class HangmanBean extends _Bean implements Serializable
 	// Atributos
 	//
 	private Hangman hangman;
+	
 	
 	//
 	// Campos do Formulário
