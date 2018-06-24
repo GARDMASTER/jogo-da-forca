@@ -1,0 +1,4 @@
+psweb.hangman
+psweb.hangman.control
+psweb.hangman.model.dao
+psweb.hangman.model.entity
